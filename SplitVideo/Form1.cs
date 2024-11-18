@@ -71,6 +71,8 @@ namespace SplitVideo
         {
             Debug.Assert(videoFileName != string.Empty, "videoFileName is empty");
 
+            Thread thead;
+
             VideoCapture capture = new VideoCapture(videoFileName);
             VideoWriter recode = new VideoWriter();
             Stopwatch stopwatch = new Stopwatch();
