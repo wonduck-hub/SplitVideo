@@ -95,13 +95,13 @@ namespace SplitVideo
 
                 if (frameCount % framePartial == 0)
                 {
-                    if (frameCount != 0) 
+                    if (frameCount != 0) // 처음 시작시 개체 해제 안함
                     { 
                         recode.Release();
                         Debug.WriteLine("single thread " + partialIndex + " end write");
                         ++partialIndex;
                     }
-                    if (partialIndex < (int)videoPartialCountUpDown.Value)
+                    if (partialIndex < (int)videoPartialCountUpDown.Value) // 마지막 영상을 영상 끝까지 읽음
                     {
                         recode.Open(dirPath + "output" + partialIndex + ".mp4", FourCC.MP4V, frameRate, frame.Size());
                         Debug.WriteLine("single thread " + partialIndex + " start write");
