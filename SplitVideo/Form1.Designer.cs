@@ -65,6 +65,7 @@
             multiThreadButton.TabIndex = 2;
             multiThreadButton.Text = "multi thread";
             multiThreadButton.UseVisualStyleBackColor = true;
+            multiThreadButton.Click += multiThreadButton_Click;
             // 
             // videoPartialCountUpDown
             // 
