@@ -1,6 +1,7 @@
 using Microsoft.VisualBasic;
 using OpenCvSharp;
 using System.Diagnostics;
+using System.Threading;
 
 namespace SplitVideo
 {
@@ -19,6 +20,7 @@ namespace SplitVideo
             }
         }
 
+        #region Disable/Enable Buttons
         private void SetSplitButtonsDisable()
         {
             singleThreadButton.Enabled = false;
@@ -44,6 +46,7 @@ namespace SplitVideo
             singleThreadButton.Enabled = true;
             multiThreadButton.Enabled = true;
         }
+        #endregion
 
         private void selectButton_Click(object sender, EventArgs e)
         {
