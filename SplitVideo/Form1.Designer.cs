@@ -32,6 +32,8 @@
             singleThreadButton = new Button();
             multiThreadButton = new Button();
             videoPartialCountUpDown = new NumericUpDown();
+            progressBar = new ProgressBar();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)videoPartialCountUpDown).BeginInit();
             SuspendLayout();
             // 
@@ -73,11 +75,29 @@
             videoPartialCountUpDown.TabIndex = 3;
             videoPartialCountUpDown.Value = new decimal(new int[] { 4, 0, 0, 0 });
             // 
+            // progressBar
+            // 
+            progressBar.Location = new Point(12, 253);
+            progressBar.Name = "progressBar";
+            progressBar.Size = new Size(776, 23);
+            progressBar.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(431, 14);
+            label1.Name = "label1";
+            label1.Size = new Size(46, 15);
+            label1.TabIndex = 5;
+            label1.Text = "threads";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
+            Controls.Add(progressBar);
             Controls.Add(videoPartialCountUpDown);
             Controls.Add(multiThreadButton);
             Controls.Add(singleThreadButton);
@@ -86,6 +106,7 @@
             Text = "Split video";
             ((System.ComponentModel.ISupportInitialize)videoPartialCountUpDown).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -94,5 +115,7 @@
         private Button singleThreadButton;
         private Button multiThreadButton;
         private NumericUpDown videoPartialCountUpDown;
+        private ProgressBar progressBar;
+        private Label label1;
     }
 }
